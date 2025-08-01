@@ -1,0 +1,29 @@
+:root {
+  /* Fonts */
+  --logo-font: "Sora", sans-serif;
+  --heading-font: "Poppins", sans-serif;
+  --paragraph-font: "Inter", sans-serif;
+
+  /* Colors */
+  --main-bg: #1c1b2d;
+
+  --logo-color: #fdf3f3;
+  --title-color: white;
+  --paragraph-color: #e5e5e5;
+
+  --primary-btn-bg: #fcd34d;
+  --primary-btn-bg-hover: rgb(83, 42, 117);
+  /* sizes */
+  --h1-size: 2.625rem;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+h1,h2,h3{
+    font-family: var(--heading-font);
+}
+p, a{
+    font-family: var(--paragraph-font);
+}
