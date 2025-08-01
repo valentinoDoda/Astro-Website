@@ -1,0 +1,55 @@
+---
+interface Props {
+  pages: string[];
+}
+const { pages } = Astro.props;
+function capitalCase(word: string): string {
+  const firstLetter = word.trim().slice(0, 1).toUpperCase();
+  return firstLetter + word.slice(1);
+}
+---
+
+<div class="menu">
+  <ul>
+    {
+      pages.map((page) => {
+        const link = page.trim().toLocaleLowerCase().split(" ").join("_");
+        const content = capitalCase(page)
+        return (
+          <li>
+            <a href={`#${link}`}>{capitalCase(page)}</a>{" "}
+          </li>
+        );
+      })
+    }
+  </ul>
+</div>
+
+<style>
+  .menu ul {
+    gap: 0.5rem;
+    display: flex;
+    list-style-type: none;
+  }
+  .menu ul li a {
+    transition: all 0.3s;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    color: var(--paragraph-color);
+    font-size: 1rem;
+  }
+  .menu ul li:last-child a {
+    margin-left: 1.5rem;
+    color: var(--main-bg);
+    background-color: var(--primary-btn-bg);
+  }
+
+  .menu ul li:last-child a:hover{
+    color: var(--primary-btn-bg);
+    background-color: var(--primary-btn-bg-hover);
+  }
+  .menu ul li a:hover{
+    color: var(--main-bg);
+    background-color: white;
+  }
+</style>
