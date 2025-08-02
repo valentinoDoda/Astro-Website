@@ -26,6 +26,9 @@
 body {
   background-color: var(--main-bg);
 }
+html{
+  scroll-behavior: smooth;
+}
 body > * {
   overflow: hidden;
   padding: 10px 1rem;
