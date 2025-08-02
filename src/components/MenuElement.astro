@@ -14,7 +14,7 @@ function capitalCase(word: string): string {
     {
       pages.map((page) => {
         const link = page.trim().toLocaleLowerCase().split(" ").join("_");
-        const content = capitalCase(page)
+        const content = capitalCase(page);
         return (
           <li>
             <a href={`#${link}`}>{capitalCase(page)}</a>{" "}
@@ -44,11 +44,11 @@ function capitalCase(word: string): string {
     background-color: var(--primary-btn-bg);
   }
 
-  .menu ul li:last-child a:hover{
+  .menu ul li:last-child a:hover {
     color: var(--primary-btn-bg);
     background-color: var(--primary-btn-bg-hover);
   }
-  .menu ul li a:hover{
+  .menu ul li a:hover {
     color: var(--main-bg);
     background-color: white;
   }

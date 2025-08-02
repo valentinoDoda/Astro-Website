@@ -1,0 +1,41 @@
+---
+const { value } = Astro.props;
+---
+
+<p><span class="value">{value}</span><slot /></p>
+
+<style>
+  p {
+    color: var(--paragraph-color);
+    font-size: 1.313rem;
+  }
+</style>
+
+<script>
+  const numValues = document.querySelectorAll(".value");
+  const duration = 1500;
+  const observerForNumbers = new IntersectionObserver((entries) => {
+    entries.forEach(
+      (entry) => {
+        const endPoint = +entry.target.textContent;
+        if (entry.isIntersecting) {
+          let startPoint = 0;
+          const calcTime = duration / endPoint;
+          const counter = setInterval(() => {
+            startPoint++;
+            entry.target.textContent = startPoint;
+            if (startPoint == endPoint) {
+              clearInterval(counter);
+            }
+          }, calcTime);
+          observerForNumbers.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.5 }
+    );
+  });
+
+  numValues.forEach((num) => {
+    observerForNumbers.observe(num);
+  });
+</script>

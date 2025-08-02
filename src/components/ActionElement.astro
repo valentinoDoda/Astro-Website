@@ -4,7 +4,7 @@ interface Props {
   type?: "btn";
   href?: string;
 }
-const { type, mode , href} = Astro.props;
+const { type, mode, href } = Astro.props;
 ---
 
 {
@@ -21,6 +21,7 @@ const { type, mode , href} = Astro.props;
 <style>
   a,
   button {
+    font-size: 1.125rem !important;
     transition: all 0.3s;
     padding: 0.5rem 1rem;
     border-radius: 8px;

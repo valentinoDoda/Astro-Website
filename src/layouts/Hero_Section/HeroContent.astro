@@ -1,0 +1,22 @@
+<h1 class="animate"> <slot name="heading"></slot></h1>
+<p slot="paragraph" class="animate"><slot name="paragraph"></slot></p>
+
+<style>
+h1 {
+  opacity: 0;
+  transform: translateX(-80%);
+  line-height: 130%;
+  font-size: var(--h1-size);
+}
+p {
+  transform: translateX(-80%);
+  opacity: 0;
+  font-size: 1.313rem;
+}
+h1.animate {
+  animation: slide-in 0.7s ease both;
+}
+ p.animate {
+  animation: slide-in 0.7s ease both;
+}
+</style>

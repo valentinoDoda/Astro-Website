@@ -21,6 +21,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+body{
+  background-color: var(--main-bg);
+}
 body > * {
   overflow: hidden;
   padding: 10px 1rem;
@@ -30,10 +33,12 @@ body > * {
 h1,
 h2,
 h3 {
+  color : var(--title-color);
   font-family: var(--heading-font);
 }
 p,
 a {
+  color: var(--paragraph-color);
   font-family: var(--paragraph-font);
 }
 a {
@@ -53,7 +58,7 @@ a {
 }
 
 .primary {
-  color: var(--main-bg);
+  color: var(--main-bg) !important;
   background-color: var(--primary-btn-bg);
 }
 .secondary {
@@ -62,10 +67,29 @@ a {
   color: var(--paragraph-color);
 }
 .primary:hover {
-  color: var(--primary-btn-bg);
+  color: var(--primary-btn-bg) !important;
   background-color: var(--primary-btn-bg-hover);
 }
 .secondary:hover {
   color: var(--main-bg);
   background-color: white;
+}
+
+@keyframes fade-in {
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+@keyframes top-slide {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }

@@ -1,0 +1,90 @@
+---
+import ActionElement from "../../components/ActionElement.astro";
+import CountedNumber from "../../components/CountedNumber.astro";
+import MarkedText from "../../components/MarkedText.astro";
+import HeroImage from "../Hero_Section/HeroImage.astro";
+import HeroContent from "./HeroContent.astro";
+---
+
+<section id="home" class="hero">
+  <div class="hero-content">
+    <div class="hero-presentasion">
+      <HeroContent>
+        <Fragment slot="heading">
+          Zhvillimi i Pranisë <MarkedText>Dixhitale</MarkedText> me <MarkedText
+            >Qëllim</MarkedText
+          > dhe Shpejtësi
+        </Fragment>
+        <Fragment slot="paragraph"
+          >Te Website Tech Albania, ne kombinojmë të menduarit strategjik me një
+          ekzekutim të shpejtë dhe cilësor. Nga faqet e personalizuara deri te
+          përvojat mbresëlënëse të përdoruesve.</Fragment
+        >
+      </HeroContent>
+    </div>
+    <div class="hero-ctas">
+      <ActionElement href="#projektet" mode="secondary"
+        >projektet tona</ActionElement
+      >
+      <ActionElement href="#kontakti" mode="primary"
+        >na kontaktoni</ActionElement
+      >
+    </div>
+    <div class="hero_benefits">
+      <CountedNumber value="10">+ vite përvojë</CountedNumber>
+      <CountedNumber value="20">+ projekte</CountedNumber>
+    </div>
+  </div>
+  <div class="hero-image">
+    <HeroImage />
+  </div>
+</section>
+
+<style>
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .hero-presentasion {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .hero-image {
+    width: 100%;
+    align-self: center;
+    height: 400px;
+  }
+  .hero-ctas {
+    margin-top: 4rem;
+    display: flex;
+    gap: 1.5rem;
+  }
+  .hero_benefits {
+    margin-top: 2.625rem;
+    color: #e5e5e5;
+    font-size: 1.313rem;
+    display: flex;
+    gap: 0.5rem;
+  }
+  @media (max-width: 800px) {
+    .hero {
+      grid-template-columns: 3fr 1fr;
+    }
+  }
+  @media (max-width: 615px) {
+    .hero {
+      grid-template-columns: 1fr;
+    }
+    .hero-image {
+      grid-row: 1;
+      height: 150px;
+    }
+  }
+  @media (max-width: 380px) {
+    .hero-ctas {
+      display: grid;
+      text-align: center;
+    }
+  }
+</style>
