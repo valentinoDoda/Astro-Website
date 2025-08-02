@@ -1,0 +1,9 @@
+---
+import ActionElement from "../components/ActionElement.astro";
+
+
+---
+<section class="section_cta">
+    <p><slot name="description"></slot></p>
+    <ActionElement mode="primary" href="#kontakti"><slot name="cta_btn"></slot></ActionElement>
+</section>
