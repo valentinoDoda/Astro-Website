@@ -141,6 +141,12 @@ a {
 .sub_title.animate {
   animation: slide-in 0.7s ease both;
 }
+.services a{
+  margin-top: 3rem;
+  margin-right: auto;
+  margin-left: auto;
+
+}
 @media (max-width: 970px) {
   .member_cards {
     grid-template-columns: repeat(2, 1fr);

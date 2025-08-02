@@ -15,6 +15,7 @@ import AllPurpose from "../layouts/Purpose/AllPurpose.astro";
 import Details from "../layouts/Details.astro";
 import ServiceCard from "../layouts/Service/ServiceCard.astro";
 import AllServices from "../layouts/Service/AllServices.astro";
+import ActionElement from "../components/ActionElement.astro";
 ---
 
 <!doctype html>
@@ -54,10 +55,9 @@ import AllServices from "../layouts/Service/AllServices.astro";
       </div>
     </FullWidthLayout>
 
-    <section id="shërbimet" class="shërbimet">
+    <section id="shërbimet" class="services">
       <h3>Cfare Ofrojme</h3>
-    </section>
-    <AllServices
+       <AllServices
       data={[
         {
           image: "web-management_5403719.png",
@@ -100,6 +100,11 @@ import AllServices from "../layouts/Service/AllServices.astro";
         },
       ]}
     />
+    <ActionElement href="#kontakti" mode="primary">Na dërgoni për të filluar</ActionElement>
+    </section>
+   
+
+
     <script>
       const elements = document.querySelectorAll(
         `h3, .member_card, .sub_title, .our_purpose, .service`
