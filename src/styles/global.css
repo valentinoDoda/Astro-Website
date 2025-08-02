@@ -134,9 +134,21 @@ a {
   font-size: 1rem;
   color: var(--primary-btn-bg);
 }
-
+.our_purpose.animate{
+  animation: fade-in 0.7s ease both;
+}
 .sub_title.animate {
   animation: slide-in 0.7s ease both;
+}
+@media (max-width: 970px) {
+  .member_cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  .member_cards {
+    grid-template-columns: 1fr;
+  }
 }
 @keyframes fade-in {
   to {

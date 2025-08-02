@@ -47,4 +47,13 @@ import PurposeCard from "./PurposeCard.astro";
     border-radius: 8px;
     grid-template-columns: repeat(3, 1fr);
   }
+  @media (max-width: 970px) {
+    .purposes {
+      grid-template-columns: 1fr;
+    }
+    .our_purpose {
+      border-right: none;
+      border-top: 8px solid var(--primary-btn-bg);
+    }
+  }
 </style>
