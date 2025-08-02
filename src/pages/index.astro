@@ -16,6 +16,7 @@ import Details from "../layouts/Details.astro";
 import ServiceCard from "../layouts/Service/ServiceCard.astro";
 import AllServices from "../layouts/Service/AllServices.astro";
 import ActionElement from "../components/ActionElement.astro";
+import ProcessStep from "../layouts/Proccess/ProcessStep.astro";
 ---
 
 <!doctype html>
@@ -57,53 +58,81 @@ import ActionElement from "../components/ActionElement.astro";
 
     <section id="shërbimet" class="services">
       <h3>Cfare Ofrojme</h3>
-       <AllServices
-      data={[
-        {
-          image: "web-management_5403719.png",
-          title: "Zhvillim i Përshtatur Web",
-          services: [
-            "UX/UI Design",
+      <AllServices
+        data={[
+          {
+            image: "web-management_5403719.png",
+            title: "Zhvillim i Përshtatur Web",
+            services: [
+              "UX/UI Design",
 
-            "Faqe Interneti Responsive",
+              "Faqe Interneti Responsive",
 
-            "CMS or Code(p.sh., Webflow ose të personalizuara)",
+              "CMS or Code(p.sh., Webflow ose të personalizuara)",
 
-            "Optimizim SEO",
-          ],
-        },
-        {
-          image: "digital-campaign_3247767.png",
-          title: "Marketing Teknologjik",
-          services: [
-            "Meta Ads (Facebook / Instagram)",
+              "Optimizim SEO",
+            ],
+          },
+          {
+            image: "digital-campaign_3247767.png",
+            title: "Marketing Teknologjik",
+            services: [
+              "Meta Ads (Facebook / Instagram)",
 
-            "Google Ads",
+              "Google Ads",
 
-            "Gjurmim Konversioni & Analitikë",
+              "Gjurmim Konversioni & Analitikë",
 
-            "Fushata Ritargetimi",
-          ],
-        },
-        {
-          image: "fingerprint_550097.png",
-          title: "Branding & Dizajn",
-          services: [
-            "Logo",
+              "Fushata Ritargetimi",
+            ],
+          },
+          {
+            image: "fingerprint_550097.png",
+            title: "Branding & Dizajn",
+            services: [
+              "Logo",
 
-            "Identitet Marke",
+              "Identitet Marke",
 
-            "Faqe Destinacioni",
+              "Faqe Destinacioni",
 
-            "Sisteme Dizajni",
-          ],
-        },
-      ]}
-    />
-    <ActionElement href="#kontakti" mode="primary">Na dërgoni për të filluar</ActionElement>
+              "Sisteme Dizajni",
+            ],
+          },
+        ]}
+      />
+      <ActionElement href="#kontakti" mode="primary"
+        >Na dërgoni për të filluar</ActionElement
+      >
     </section>
-   
 
+    <section class="process">
+      <h3>Procesi</h3>
+      <ProcessStep
+        process={[
+          [
+            "Zbulimi & Përcaktimi i Qëllimeve",
+            "Takimi fillestar për të kuptuar biznesin e klientit, audiencën e synuar dhe objektivat në internet. Kjo përfshin diskutimin e identitetit të markës, veçorive të dëshiruara dhe qëllimeve afatgjata.",
+          ],
+          [
+            "Hulumtim & Planifikim Strategjik",
+            "Analizë e konkurrentëve dhe e tregut për të identifikuar mundësitë. Krijohet një strategji e personalizuar, që përfshin strukturën e faqes internet, SEO, si dhe sugjerime për rrjetet sociale ose reklamat në internet, nëse është e nevojshme.",
+          ],
+          [
+            "Mbledhja e Përmbajtjes & Drejtimi Kreativ",
+            "Klienti siguron të gjitha materialet e nevojshme: logo, foto, tekste dhe asete të branding-ut. Nëse është e nevojshme, zhvilluesi ndihmon me krijimin e përmbajtjes (p.sh. copywriting, fotografi ose dizajn grafik)",
+          ],
+          [
+            "Dizajn & Zhvillim i Faqes Internet",
+            "Faqja duhet të jetë vizualisht tërheqëse, e lehtë për t'u përdorur, e përshtatshme për mobile, dhe e optimizuar për shpejtësi dhe SEO. Klienti merr përditësime të rregullta gjatë procesit.",
+          ],
+          [
+            "Mbështetje & Rritje",
+            "Klienti merr trajnime (nëse është e nevojshme) për të menaxhuar faqen dhe ka mbështetje të vazhdueshme për përditësime teknike, ndihmë në probleme dhe shërbime marketingu dixhital për të rritur prezencën online.",
+          ],
+        ]}
+      />
+    </section>
 
     <script>
       const elements = document.querySelectorAll(
