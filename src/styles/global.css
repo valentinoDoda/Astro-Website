@@ -122,7 +122,8 @@ a {
 }
 .member_card.animate,
 .service.animate,
-.our_purpose.animate {
+.our_purpose.animate,
+.section_cta.animate {
   animation: fade-in 0.7s ease both;
 }
 

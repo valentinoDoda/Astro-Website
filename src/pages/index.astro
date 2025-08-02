@@ -17,6 +17,7 @@ import ServiceCard from "../layouts/Service/ServiceCard.astro";
 import AllServices from "../layouts/Service/AllServices.astro";
 import ActionElement from "../components/ActionElement.astro";
 import ProcessStep from "../layouts/Proccess/ProcessStep.astro";
+import CtaSection from "../layouts/CtaSection.astro";
 ---
 
 <!doctype html>
@@ -134,9 +135,21 @@ import ProcessStep from "../layouts/Proccess/ProcessStep.astro";
       />
     </section>
 
+    <CtaSection>
+      <Fragment slot="title">
+        Shkëlqe në internet. Tërhiq klientët idealë
+      </Fragment>
+      <Fragment slot="description">
+        Me ne, biznesi juaj do të fitojë një prezencë dixhitale profesionale që
+        inspiron besim, nxit lidhje me audiencën dhe gjeneron rezultate të
+        matshme. Le ta transformojmë vizionin tuaj në sukses online.
+      </Fragment>
+      <Fragment slot="cta_btn">Merrni Një Konsultim Falas</Fragment>
+    </CtaSection>
+
     <script>
       const elements = document.querySelectorAll(
-        `h3, .member_card, .sub_title, .our_purpose, .service`
+        `h3, .member_card, .sub_title, .our_purpose, .service, .section_cta`
       );
       const observer = new IntersectionObserver(
         (entries) => {

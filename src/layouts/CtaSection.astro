@@ -1,9 +1,48 @@
 ---
 import ActionElement from "../components/ActionElement.astro";
-
-
 ---
+
 <section class="section_cta">
-    <p><slot name="description"></slot></p>
-    <ActionElement mode="primary" href="#kontakti"><slot name="cta_btn"></slot></ActionElement>
+  <h4><slot name="title" /></h4>
+  <p><slot name="description" /></p>
+  <div class="cta_btn">
+    <ActionElement mode="primary" href="#kontakti"
+      ><slot name="cta_btn" /></ActionElement
+    >
+  </div>
 </section>
+
+<style>
+  .section_cta {
+    opacity: 0;
+    scale: 0.1;
+    background-color: #26243a;
+    border-radius: 16px;
+    padding: 6rem 6rem;
+    text-align: center;
+  }
+  .section_cta h4 {
+    font-size: 2.5rem;
+    color: var(--title-color);
+    font-family: var(--heading-font);
+  }
+  .section_cta p {
+    font-size: 1.2rem;
+    padding-top: 1.2rem;
+    padding-bottom: 6rem;
+  }
+  .section_cta :last-child {
+    margin: auto;
+    width: max-content;
+  }
+  @media (max-width: 800px) {
+    .section_cta {
+      padding: 6rem 1rem;
+    }
+  }
+  @media (max-width: 380px) {
+    .section_cta :last-child {
+      width: 100%;
+    }
+  }
+</style>
