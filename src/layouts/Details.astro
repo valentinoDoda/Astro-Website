@@ -1,0 +1,22 @@
+---
+import DetailElement from "../components/DetailElement.astro";
+interface Props {
+  details: string[];
+}
+const { details } = Astro.props;
+---
+
+<div>
+  {
+    details.map((detail) => {
+      return <DetailElement>{detail}</DetailElement>;
+    })
+  }
+</div>
+
+<style>
+  div {
+    display: grid;
+    gap: 0.5rem;
+  }
+</style>

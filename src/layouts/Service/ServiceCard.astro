@@ -1,0 +1,33 @@
+---
+const { img } = Astro.props;
+---
+
+<div class="service">
+  <div class="service_img">
+    <img src={img} alt="" srcset="" />
+  </div>
+  <h5><slot name="title" /></h5>
+  <slot name="services" />
+  <style>
+    .service {
+      scale: 0.1;
+      opacity: 0;
+      background-color: #272440;
+      border-radius: 16px;
+      padding: 30px;
+    }
+    .service_img {
+      height: 32px;
+      width: 32px;
+    }
+    h5 {
+      margin: 1rem 0;
+      font-size: 1.5rem;
+    }
+    .service_img img {
+      width: 100%;
+      filter: brightness(0) saturate(100%) invert(90%) sepia(100%)
+        saturate(5813%) hue-rotate(319deg) brightness(104%) contrast(98%);
+    }
+  </style>
+</div>

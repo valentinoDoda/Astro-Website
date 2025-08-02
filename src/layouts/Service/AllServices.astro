@@ -1,0 +1,42 @@
+---
+import ServiceCard from "./ServiceCard.astro";
+import Details from "../Details.astro";
+interface Props {
+  data: {
+    title: string;
+    image: string;
+    services: string[];
+  }[];
+}
+const { data } = Astro.props;
+console.log(data);
+---
+
+<div class="all_services">
+  {
+    data.map((service) => {
+      return (
+        <ServiceCard img={`${service.image}`}>
+          <Fragment slot="title">{service.title}</Fragment>
+          <Fragment slot="services">
+            <Details details={service.services} />
+          </Fragment>
+        </ServiceCard>
+      );
+    })
+  }
+</div>
+
+<style>
+  .all_services {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 5rem;
+  }
+  @media (max-width: 970px) {
+    .all_services {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

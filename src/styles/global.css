@@ -35,7 +35,8 @@ body > * {
 }
 h1,
 h2,
-h3 {
+h3,
+h5 {
   color: var(--title-color);
   font-family: var(--heading-font);
 }
@@ -43,7 +44,7 @@ h3 {
   padding-top: 4rem;
   text-align: center;
   opacity: 0;
-  transform: translateY(-60%);
+  transform: translateY(-50%);
   font-size: 2.625rem;
 }
 h3.animate {
@@ -119,7 +120,9 @@ a {
   padding: 0.8rem;
   border-radius: 8px;
 }
-.member_card.animate {
+.member_card.animate,
+.service.animate,
+.our_purpose.animate {
   animation: fade-in 0.7s ease both;
 }
 
@@ -134,9 +137,7 @@ a {
   font-size: 1rem;
   color: var(--primary-btn-bg);
 }
-.our_purpose.animate{
-  animation: fade-in 0.7s ease both;
-}
+
 .sub_title.animate {
   animation: slide-in 0.7s ease both;
 }

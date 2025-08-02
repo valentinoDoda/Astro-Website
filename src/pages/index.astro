@@ -1,7 +1,7 @@
 ---
 import "../styles/global.css";
 import HeaderElement from "../layouts/Header/HeaderElement.astro";
-
+import DetailElement from "../components/DetailElement.astro";
 import HeroSection from "../layouts/Hero_Section/HeroSection.astro";
 import DescriptionCollapse from "../components/DescriptionCollapse.vue";
 import FeaturesCards from "../components/FeaturesCards.astro";
@@ -12,6 +12,9 @@ import AllCards from "../layouts/Member/AllCards.astro";
 import PurposeCard from "../layouts/Purpose/PurposeCard.astro";
 import MarkedText from "../components/MarkedText.astro";
 import AllPurpose from "../layouts/Purpose/AllPurpose.astro";
+import Details from "../layouts/Details.astro";
+import ServiceCard from "../layouts/Service/ServiceCard.astro";
+import AllServices from "../layouts/Service/AllServices.astro";
 ---
 
 <!doctype html>
@@ -51,9 +54,55 @@ import AllPurpose from "../layouts/Purpose/AllPurpose.astro";
       </div>
     </FullWidthLayout>
 
+    <section id="shërbimet" class="shërbimet">
+      <h3>Cfare Ofrojme</h3>
+    </section>
+    <AllServices
+      data={[
+        {
+          image: "web-management_5403719.png",
+          title: "Zhvillim i Përshtatur Web",
+          services: [
+            "UX/UI Design",
+
+            "Faqe Interneti Responsive",
+
+            "CMS or Code(p.sh., Webflow ose të personalizuara)",
+
+            "Optimizim SEO",
+          ],
+        },
+        {
+          image: "digital-campaign_3247767.png",
+          title: "Marketing Teknologjik",
+          services: [
+            "Meta Ads (Facebook / Instagram)",
+
+            "Google Ads",
+
+            "Gjurmim Konversioni & Analitikë",
+
+            "Fushata Ritargetimi",
+          ],
+        },
+        {
+          image: "fingerprint_550097.png",
+          title: "Branding & Dizajn",
+          services: [
+            "Logo",
+
+            "Identitet Marke",
+
+            "Faqe Destinacioni",
+
+            "Sisteme Dizajni",
+          ],
+        },
+      ]}
+    />
     <script>
       const elements = document.querySelectorAll(
-        `h3, .member_card, .sub_title, .our_purpose`
+        `h3, .member_card, .sub_title, .our_purpose, .service`
       );
       const observer = new IntersectionObserver(
         (entries) => {
