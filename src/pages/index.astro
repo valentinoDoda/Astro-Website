@@ -9,6 +9,9 @@ import MemberInfo from "../layouts/Member/MemberInfo.astro";
 import MemberCard from "../layouts/Member/MemberCard.astro";
 import FullWidthLayout from "../layouts/FullWidthLayout.astro";
 import AllCards from "../layouts/Member/AllCards.astro";
+import PurposeCard from "../layouts/Purpose/PurposeCard.astro";
+import MarkedText from "../components/MarkedText.astro";
+import AllPurpose from "../layouts/Purpose/AllPurpose.astro";
 ---
 
 <!doctype html>
@@ -23,6 +26,10 @@ import AllCards from "../layouts/Member/AllCards.astro";
             deri te përvojat mbresëlënëse të përdoruesve."
     />
     <link rel="icon" href="Group-10-1.png" type="image/png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins&family=Sora&display=swap"
+      rel="stylesheet"
+    />
     <title>Website Tech Albania</title>
     <link rel="stylesheet" href="../styles/global.css" />
   </head>
@@ -37,11 +44,17 @@ import AllCards from "../layouts/Member/AllCards.astro";
         <p class="sub_title">Njihuni me ekipin tonë</p>
         <AllCards />
       </div>
+
+      <div class="purpose">
+        <p class="sub_title">Qëllimi ynë</p>
+        <AllPurpose />
+      </div>
     </FullWidthLayout>
 
-    
     <script>
-      const elements = document.querySelectorAll(`h3, .member_card, .sub_title`);
+      const elements = document.querySelectorAll(
+        `h3, .member_card, .sub_title`
+      );
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {

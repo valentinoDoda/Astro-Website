@@ -1,0 +1,32 @@
+<div class="our_purpose">
+  <p class="index"><slot name="index"></slot></p>
+  <p class="title"><slot name="title"></slot></p>
+  <p class="description"><slot name="description"></slot></p>
+</div>
+
+<style>
+  .our_purpose {
+    background-color: var(--main-bg);
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px var(--main-bg);
+    overflow-x: hidden;
+    border-right: 8px solid var(--primary-btn-bg);
+    text-align: center;
+    padding: 1rem;
+  }
+  .index {
+    font-weight:600;
+    font-family: var(--heading-font);
+    color: white;
+    font-size: 3rem;
+  }
+  .title {
+    font-weight: 600;
+    line-height: 130%;
+    font-size: 1.5rem;
+  }
+  .description {
+    padding-top: 1rem;
+    font-size: 1.2rem;
+  }
+</style>

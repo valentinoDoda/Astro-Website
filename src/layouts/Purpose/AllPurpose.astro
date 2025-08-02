@@ -1,0 +1,50 @@
+---
+import MarkedText from "../../components/MarkedText.astro";
+import PurposeCard from "./PurposeCard.astro";
+---
+
+<div class="purposes">
+  <PurposeCard>
+    <Fragment slot="index">
+      01<MarkedText>.</MarkedText>
+    </Fragment>
+    <Fragment slot="title">Më Shumë Se Faqe Interneti </Fragment>
+    <Fragment slot="description">
+      Çdo projekt udhëhiqet nga një qëllim i qartë: të komunikohen thelbin e
+      markës suaj dhe të krijojnë angazhime kuptimplote.
+    </Fragment>
+  </PurposeCard>
+
+  <PurposeCard>
+    <Fragment slot="index">
+      02<MarkedText>.</MarkedText>
+    </Fragment>
+    <Fragment slot="title">Qëllimi Takon Performancën </Fragment>
+    <Fragment slot="description">
+      Në botën dixhitale me ritëm të shpejtë të sotme, koha ka rëndësi. Prandaj
+      ne kombinojmë strategji të menduara me ekzekutim të shkathtë — duke sjellë
+      rezultate shpejt
+    </Fragment>
+  </PurposeCard>
+
+  <PurposeCard>
+    <Fragment slot="index">
+      03<MarkedText>.</MarkedText>
+    </Fragment>
+    <Fragment slot="title">Zgjidhje Dixhitale Të Përshtatura </Fragment>
+    <Fragment slot="description">
+      Qofshi një startup i gatshëm për të debutuar apo një biznes i konsoliduar
+      në evolucion, ne ndërtojmë zgjidhje me pamje të fuqishme, teknologjikisht
+      të përsosura dhe në harmoni me qëllimet tuaja
+    </Fragment>
+  </PurposeCard>
+</div>
+
+<style>
+  .purposes {
+    display: grid;
+    gap: 2rem;
+    border-radius: 8px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+</style>
