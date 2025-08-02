@@ -36,6 +36,16 @@ h3 {
   color : var(--title-color);
   font-family: var(--heading-font);
 }
+h3 {
+    padding-top: 4rem;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-60%);
+    font-size: 2.625rem;
+}
+h3.animate{
+     animation: top-slide ease 0.7s both;
+}
 p,
 a {
   color: var(--paragraph-color);
@@ -73,6 +83,13 @@ a {
 .secondary:hover {
   color: var(--main-bg);
   background-color: white;
+}
+.truncate-3-lines{
+      display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 @keyframes fade-in {

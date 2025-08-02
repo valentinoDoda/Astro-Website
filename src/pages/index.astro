@@ -3,6 +3,7 @@ import "../styles/global.css";
 import HeaderElement from "../layouts/Header/HeaderElement.astro";
 
 import HeroSection from "../layouts/Hero_Section/HeroSection.astro";
+import DescriptionCollapse from "../components/DescriptionCollapse.vue";
 ---
 
 <!doctype html>
@@ -24,8 +25,16 @@ import HeroSection from "../layouts/Hero_Section/HeroSection.astro";
     <HeaderElement />
 
     <HeroSection />
+    <DescriptionCollapse client:visible
+      >Unë jam një dizajner UX/UI 19-vjeçar nga Shqipëria 🇦🇱. Me pasionin tim
+      për dizajnin dhe kreativitetin, po ndërtoj aftësitë e mia për të krijuar
+      përvoja dhe interfejse përdoruesi inovative dhe tërheqëse. 🤩 👨‍💻 Në moshën
+      e re, mundohem të mësoj sa më shumë nga profesionistët në fushën e
+      dizajnit web dhe ndjek pasionin tim në këtë industri dinamike dhe në
+      ndryshim të vazhdueshëm. 🚀 🌟 Për mua, dizajni nuk është thjesht një punë
+      - është një mënyrë për të shprehur veten dhe për të ndikuar në botën
+      dixhitale. 🌎</DescriptionCollapse
+    >
+    <h3 class="animate">Hi i test</h3>
   </body>
-  <script>
-    
-  </script>
 </html>
