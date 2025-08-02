@@ -21,7 +21,7 @@
   margin: 0;
   box-sizing: border-box;
 }
-body{
+body {
   background-color: var(--main-bg);
 }
 body > * {
@@ -33,18 +33,18 @@ body > * {
 h1,
 h2,
 h3 {
-  color : var(--title-color);
+  color: var(--title-color);
   font-family: var(--heading-font);
 }
 h3 {
-    padding-top: 4rem;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(-60%);
-    font-size: 2.625rem;
+  padding-top: 4rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(-60%);
+  font-size: 2.625rem;
 }
-h3.animate{
-     animation: top-slide ease 0.7s both;
+h3.animate {
+  animation: top-slide ease 0.7s both;
 }
 p,
 a {
@@ -66,7 +66,18 @@ a {
   color: var(--main-bg);
   background-color: white;
 }
-
+.userFeatures {
+  color: white;
+  background-color: var(--main-bg);
+  padding: 5px 20px;
+}
+.companiesFeatures {
+  color: var(--primary-btn-bg);
+  padding: 8px;
+  font-size: 0.8rem;
+  font-family: var(--paragraph-font);
+  background-color: #26243a;
+}
 .primary {
   color: var(--main-bg) !important;
   background-color: var(--primary-btn-bg);
@@ -84,14 +95,30 @@ a {
   color: var(--main-bg);
   background-color: white;
 }
-.truncate-3-lines{
-      display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
-    overflow: hidden;
+.truncate-3-lines {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
+.member_cards {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.member_card {
+  scale: 0.1;
+  opacity: 0;
+  box-shadow: 0px 0px 14px #100f18;
+  padding: 0.8rem;
+  border-radius: 8px;
+}
+.member_card.animate {
+  animation: fade-in 0.7s ease both;
+}
 @keyframes fade-in {
   to {
     scale: 1;

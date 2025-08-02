@@ -1,0 +1,27 @@
+---
+import DescriptionCollapse from "../../components/DescriptionCollapse.vue";
+import FeaturesCards from "../../components/FeaturesCards.astro";
+import MemberInfo from "./MemberInfo.astro";
+interface Member {
+  img: string;
+  name: string;
+  role: string;
+  features: string[];
+}
+
+interface Props {
+  member: Member;
+}
+const { member } = Astro.props;
+---
+
+<div class="member_card animate">
+  <MemberInfo img={`${member.img}`}>
+    <Fragment slot="memberName">{member.name}</Fragment>
+    <Fragment slot="memberRole">{member.role}</Fragment>
+  </MemberInfo>
+  <DescriptionCollapse client:visible>
+    <slot />
+  </DescriptionCollapse>
+  <FeaturesCards niche="user" features={member.features} />
+</div>

@@ -1,16 +1,23 @@
 ---
 interface Props {
-    idName : string,
-    className :string    
+  idName: string;
+  className: string;
 }
 const { idName, className } = Astro.props;
 ---
 
-<div id={idName} class={className}>
+<div id={idName} class:list={[className, "fullWidth"]}>
+  <div class="centered">
     <slot />
+  </div>
 </div>
 <style>
-  div {
+  .centered {
+    max-width: 1285px;
+    margin: auto;
+    padding: 6rem 0;
+  }
+  .fullWidth {
     max-width: 100%;
     background-color: #26243a;
   }

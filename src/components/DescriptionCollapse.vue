@@ -24,6 +24,9 @@ button {
   font-size: 0.9rem;
   text-decoration: underline;
 }
+.description_collapse{
+    margin-top: 0.5rem;
+}
 .description_collapse p {
   font-size: 1rem;
 }

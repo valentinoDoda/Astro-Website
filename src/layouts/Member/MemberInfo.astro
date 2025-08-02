@@ -1,0 +1,49 @@
+---
+interface Props {
+  img: string;
+}
+const { img } = Astro.props;
+---
+
+<div class="member_info">
+  <div class="member_image">
+    <img
+      src={`${img}`}
+      alt="ceo of the company"
+      title="ceo of the company"
+      srcset=""
+    />
+  </div>
+  <div class="member_role">
+    <p><slot name="memberName" /></p>
+    <p><slot name="memberRole" /></p>
+  </div>
+</div>
+
+<style>
+  .member_info {
+    gap: 0.5rem;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+  }
+  .member_image {
+    height: 4.5rem;
+    width: 4.5rem;
+  }
+  .member_role {
+    padding-top: 0.2rem;
+  }
+  .member_image img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+  }
+  .member_info .member_role p:first-child {
+    font-size: 1.2rem;
+    color: white;
+  }
+  .member_info .member_role p:last-child {
+    color: var(--paragraph-color);
+    font-size: 0.8rem;
+  }
+</style>
