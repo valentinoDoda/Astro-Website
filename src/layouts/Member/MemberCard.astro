@@ -15,7 +15,7 @@ interface Props {
 const { member } = Astro.props;
 ---
 
-<div class="member_card animate">
+<div class="member_card">
   <MemberInfo img={`${member.img}`}>
     <Fragment slot="memberName">{member.name}</Fragment>
     <Fragment slot="memberRole">{member.role}</Fragment>

@@ -38,5 +38,23 @@ import AllCards from "../layouts/Member/AllCards.astro";
         <AllCards />
       </div>
     </FullWidthLayout>
+
+    
+    <script>
+      const elements = document.querySelectorAll(`h3, .member_card, .sub_title`);
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
+
+      elements.forEach((entry) => observer.observe(entry));
+    </script>
   </body>
 </html>
