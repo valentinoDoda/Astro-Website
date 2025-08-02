@@ -4,7 +4,7 @@ const { img } = Astro.props;
 
 <div class="service">
   <div class="service_img">
-    <img src={img} alt="" srcset="" />
+    <img loading="lazy" src={img} alt="" srcset="" />
   </div>
   <h5><slot name="title" /></h5>
   <slot name="services" />
