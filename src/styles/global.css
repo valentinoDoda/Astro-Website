@@ -160,7 +160,9 @@ a {
   display: grid;
   justify-content: center;
 }
-
+button{
+  padding: 1rem !important;
+}
 @media (max-width: 970px) {
   .member_cards {
     grid-template-columns: repeat(2, 1fr);
