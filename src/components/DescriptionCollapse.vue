@@ -16,6 +16,7 @@ function open() {
 </script>
 <style scoped>
 button {
+  padding: 0 !important;
   background-color: rgba(1,1,1,0);
   border: none;
   cursor: pointer;

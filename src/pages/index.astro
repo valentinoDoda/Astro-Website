@@ -43,11 +43,13 @@ import Copyright from "../components/Copyright.astro";
 
     <HeroSection />
 
-    <FullWidthLayout className="about" idName="rreth_nesh">
-      <h3>Reeth Nesh</h3>
-      <div class="meeting_team">
-        <p class="sub_title">Njihuni me ekipin tonë</p>
-        <AllCards />
+    <FullWidthLayout bg="#26243a" className="about" idName="rreth_nesh">
+      <div style="padding: 6rem 0;" class="about_us">
+        <h3>Reeth Nesh</h3>
+        <div class="meeting_team">
+          <p class="sub_title">Njihuni me ekipin tonë</p>
+          <AllCards />
+        </div>
       </div>
 
       <div class="purpose">
@@ -197,11 +199,12 @@ import Copyright from "../components/Copyright.astro";
       <ContactLeft />
       <ContactRight />
     </section>
-
-    <footer style="background-color: #272440;padding: 2rem 1rem;">
-      <Footer />
-      <Copyright> copyright website tech albania 2025 </Copyright>
-    </footer>
+    <FullWidthLayout bg="#272440" idName="footer" className="footer">
+      <footer style="padding: 2rem 0 ;">
+        <Footer />
+        <Copyright> copyright website tech albania 2025 </Copyright>
+      </footer>
+    </FullWidthLayout>
     <script>
       const elements = document.querySelectorAll(
         `h3, .member_card, .sub_title, .our_purpose, .service, .section_cta, .project_container`
