@@ -14,7 +14,7 @@ const { img, services, link } = Astro.props;
   <div class="project_img">
     <img loading="lazy" src={img} alt="" />
   </div>
-  <h3><slot name="title"/></h3>
+  <p><slot name="title" /></p>
   <div class="project_services">
     <FeaturesCards features={[...services]} niche="company" />
   </div>
@@ -36,6 +36,8 @@ const { img, services, link } = Astro.props;
     padding: 0 1rem;
   }
   .project_container {
+    opacity: 0;
+    scale: 0.1;
     padding-bottom: 2rem;
     border-radius: 16px;
     box-shadow: 0px 0px 4px black;
@@ -46,8 +48,11 @@ const { img, services, link } = Astro.props;
     height: 100%;
     width: 100%;
   }
-  .project_container h3 {
+  .project_container p {
+    color: var(--title-color);
+    font-family: var(--heading-font);
     text-align: left;
+    font-weight: bold;
     padding: 1rem;
     font-size: 1.5rem;
   }
@@ -63,11 +68,9 @@ const { img, services, link } = Astro.props;
     padding-top: 1rem !important;
     padding-bottom: 3rem !important;
   }
-  @media (max-width: 380px){
-  .project_btns{
-    grid-template-columns: 1fr;
-    
+  @media (max-width: 380px) {
+    .project_btns {
+      grid-template-columns: 1fr;
+    }
   }
-}
-
 </style>
