@@ -1,0 +1,17 @@
+---
+import SocialMedia from "../../components/SocialMedia.astro";
+import ContactMethod from "./ContactMethod.astro";
+---
+
+<div class="contact_left animate">
+  <ContactMethod />
+  <SocialMedia />
+</div>
+<style>
+  .contact_left {
+    padding-bottom: 20px;
+    border-radius: 8px;
+    background-color: var(--primary-btn-bg-hover);
+    display: grid;
+  }
+</style>

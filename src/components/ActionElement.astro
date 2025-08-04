@@ -9,7 +9,7 @@ const { type, mode, href } = Astro.props;
 
 {
   type == "btn" ? (
-    <button class:list={[mode]}>
+    <button type="submit" class:list={[mode]}>
       <slot />
     </button>
   ) : (
@@ -25,6 +25,8 @@ const { type, mode, href } = Astro.props;
   }
   a,
   button {
+    cursor: pointer;
+    border: none;
     text-align: center;
     font-size: 1.125rem !important;
     transition: all 0.3s;
@@ -34,5 +36,4 @@ const { type, mode, href } = Astro.props;
     color: var(--paragraph-color);
     font-size: 1rem;
   }
-
 </style>

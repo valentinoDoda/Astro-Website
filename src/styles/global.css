@@ -47,6 +47,14 @@ h3 {
   transform: translateY(-50%);
   font-size: 2.625rem;
 }
+.contact {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr 2fr;
+}
+svg {
+  color: var(--primary-btn-bg);
+}
 h3.animate {
   animation: top-slide ease 0.7s both;
 }
@@ -143,13 +151,12 @@ a {
 .sub_title.animate {
   animation: slide-in 0.7s ease both;
 }
-.services a{
+.services a {
   margin-top: 3rem;
   margin-right: auto;
   margin-left: auto;
-
 }
-.service_cta{
+.service_cta {
   display: grid;
   justify-content: center;
 }
@@ -182,12 +189,11 @@ a {
     opacity: 1;
   }
 }
-@media (max-width: 380px){
-  .service_cta{
+@media (max-width: 380px) {
+  .service_cta {
     justify-content: stretch;
   }
-  .project_btns{
+  .project_btns {
     grid-template-columns: 1fr;
-
   }
 }

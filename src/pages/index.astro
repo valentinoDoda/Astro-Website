@@ -1,25 +1,22 @@
 ---
 import "../styles/global.css";
 import HeaderElement from "../layouts/Header/HeaderElement.astro";
-import DetailElement from "../components/DetailElement.astro";
+import SocialMedia from "../components/SocialMedia.astro";
 import HeroSection from "../layouts/Hero_Section/HeroSection.astro";
-import DescriptionCollapse from "../components/DescriptionCollapse.vue";
-import FeaturesCards from "../components/FeaturesCards.astro";
-import MemberInfo from "../layouts/Member/MemberInfo.astro";
-import MemberCard from "../layouts/Member/MemberCard.astro";
+
 import FullWidthLayout from "../layouts/FullWidthLayout.astro";
 import AllCards from "../layouts/Member/AllCards.astro";
-import PurposeCard from "../layouts/Purpose/PurposeCard.astro";
-import MarkedText from "../components/MarkedText.astro";
 import AllPurpose from "../layouts/Purpose/AllPurpose.astro";
-import Details from "../layouts/Details.astro";
-import ServiceCard from "../layouts/Service/ServiceCard.astro";
+
 import AllServices from "../layouts/Service/AllServices.astro";
 import ActionElement from "../components/ActionElement.astro";
 import ProcessStep from "../layouts/Proccess/ProcessStep.astro";
 import CtaSection from "../layouts/CtaSection.astro";
-import ProjectCard from "../components/ProjectCard.astro";
+
 import AllProjects from "../layouts/AllProjects.astro";
+import ContactMethod from "../layouts/Contact/ContactMethod.astro";
+import ContactLeft from "../layouts/Contact/ContactLeft.astro";
+import FormContact from "../layouts/Contact/FormContact.astro";
 ---
 
 <!doctype html>
@@ -193,6 +190,12 @@ import AllProjects from "../layouts/AllProjects.astro";
           },
         ]}
       />
+    </section>
+
+    <section id="kontakti" class="contact">
+      <h3 style="grid-column: 1/ span 2; margin-bottom: 5rem">Na Kontaktoni</h3>
+      <ContactLeft />
+      <FormContact></FormContact>
     </section>
     <script>
       const elements = document.querySelectorAll(
