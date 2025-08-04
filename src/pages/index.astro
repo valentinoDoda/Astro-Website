@@ -1,7 +1,6 @@
 ---
 import "../styles/global.css";
 import HeaderElement from "../layouts/Header/HeaderElement.astro";
-import SocialMedia from "../components/SocialMedia.astro";
 import HeroSection from "../layouts/Hero_Section/HeroSection.astro";
 
 import FullWidthLayout from "../layouts/FullWidthLayout.astro";
@@ -14,10 +13,10 @@ import ProcessStep from "../layouts/Proccess/ProcessStep.astro";
 import CtaSection from "../layouts/CtaSection.astro";
 
 import AllProjects from "../layouts/AllProjects.astro";
-import ContactMethod from "../layouts/Contact/ContactMethod.astro";
 import ContactLeft from "../layouts/Contact/ContactLeft.astro";
-import FormContact from "../layouts/Contact/FormContact.astro";
 import ContactRight from "../layouts/Contact/ContactRight.astro";
+import Footer from "../layouts/Footer/Footer.astro";
+import Copyright from "../components/Copyright.astro";
 ---
 
 <!doctype html>
@@ -198,6 +197,11 @@ import ContactRight from "../layouts/Contact/ContactRight.astro";
       <ContactLeft />
       <ContactRight />
     </section>
+
+    <footer style="background-color: #272440;padding: 2rem 1rem;">
+      <Footer />
+      <Copyright> copyright website tech albania 2025 </Copyright>
+    </footer>
     <script>
       const elements = document.querySelectorAll(
         `h3, .member_card, .sub_title, .our_purpose, .service, .section_cta, .project_container`

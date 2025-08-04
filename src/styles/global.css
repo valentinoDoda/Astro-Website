@@ -160,12 +160,18 @@ a {
   display: grid;
   justify-content: center;
 }
-button{
+button {
   padding: 1rem !important;
 }
+
 @media (max-width: 970px) {
   .member_cards {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .menu.show {
+    display: block !important;
+    grid-column: 1 / 3 !important;
+    width: 100%;
   }
 }
 @media (max-width: 800px) {
@@ -174,6 +180,9 @@ button{
   }
   .contact h3 {
     grid-column: 1 !important;
+  }
+  .footer_container {
+    grid-template-columns: 1fr !important;
   }
 }
 @media (max-width: 500px) {
@@ -200,12 +209,12 @@ button{
   }
 }
 @media (max-width: 380px) {
-  html{
+  html {
     font-size: small;
   }
   body > * {
-  padding:8px;
-}
+    padding: 8px;
+  }
   .service_cta {
     justify-content: stretch;
   }

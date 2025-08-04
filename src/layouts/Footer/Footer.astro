@@ -1,0 +1,27 @@
+---
+import FirstPart from "./FirstPart.astro";
+import SecondPart from "./SecondPart.astro";
+import ThirdPart from "./ThirdPart.astro";
+---
+
+<div class="footer_container">
+  <FirstPart>
+    <Fragment slot="title">Website Tech Albania </Fragment>
+    <Fragment slot="description">
+      Ne kombinojmë të menduarit strategjik me një ekzekutim të shpejtë dhe
+      cilësor. Nga faqet e personalizuara deri te përvojat mbresëlënëse të
+      përdoruesve.
+    </Fragment>
+  </FirstPart>
+  <SecondPart />
+  <ThirdPart email="website.techal@gmail.com" , phone="00355676457173" />
+</div>
+
+<style>
+  .footer_container {
+    gap: 2rem;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+</style>

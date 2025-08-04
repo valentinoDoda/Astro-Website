@@ -5,11 +5,24 @@ import MenuElement from "../../components/MenuElement.astro";
 <header>
   <nav>
     <div class="logo">
-      <p><a href="/">Website Tech Albania</a></p>
+      <p><a href="/#">Website Tech Albania</a></p>
     </div>
     <div class="hamburge-btn">
       <button id="toggleMenu">
-       dsdsds
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 16 16"
+          ><!-- Icon from Charm Icons by Jay Newey - https://github.com/jaynewey/charm-icons/blob/main/LICENSE -->
+          <path
+            fill="none"
+            stroke="#ffd34d"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+            d="M2.75 12.25h10.5m-10.5-4h10.5m-10.5-4h10.5"></path></svg
+        >
       </button>
     </div>
     <MenuElement pages={["rreth Nesh", "shërbimet", "projektet", "kontakti"]} />
@@ -32,7 +45,7 @@ import MenuElement from "../../components/MenuElement.astro";
     align-items: center;
     justify-content: space-between;
   }
-  .hamburge-btn{
+  .hamburge-btn {
     display: none;
   }
   header {
@@ -48,4 +61,32 @@ import MenuElement from "../../components/MenuElement.astro";
     width: 100%;
     background-color: var(--main-bg);
   }
+  .hamburge-btn button {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--logo-color);
+  }
+  button {
+    padding: 0 !important;
+    border: none;
+    background: none;
+  }
+  @media (max-width: 970px) {
+    .hamburge-btn {
+      display: block;
+    }
+  }
 </style>
+
+<script>
+  const btn = document.querySelector(".hamburge-btn") as HTMLButtonElement;
+  const menu = document.querySelector(".menu") as HTMLElement;
+  btn.addEventListener("click", function () {
+    menu.classList.toggle("show");
+  });
+
+  // Κλείσιμο του μενού αν ο χρήστης κάνει κλικ οπουδήποτε αλλού στη σελίδα
+  menu.addEventListener("click", (e: Event) => {
+    (menu as HTMLElement).classList.toggle("show");
+  });
+</script>

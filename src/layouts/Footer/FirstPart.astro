@@ -1,0 +1,53 @@
+---
+import SocialMedia from "../../components/SocialMedia.astro";
+---
+
+<div class="part_1">
+  <p>
+    <slot name="title" />
+    <p><slot name="description" /></p>
+    <SocialMedia />
+
+    <a href="/#">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+        ><!-- Icon from Humbleicons by Jiří Zralý - https://github.com/zraly/humbleicons/blob/master/license -->
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M20 4H4m8 3v11m0-11l3 3m-3-3l-3 3"></path></svg
+      >
+      Shko Lart
+    </a>
+  </p>
+
+  <style>
+    .part_1 {
+      display: grid;
+      justify-items: start;
+      gap: 1rem;
+    }
+    .part_1 p:first-child {
+      font-family: var(--logo-font);
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--logo-color);
+    }
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 8px 16px;
+      border-radius: 8px;
+      border: 1px solid white;
+      width: max-content;
+    }
+  </style>
+</div>

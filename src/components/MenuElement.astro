@@ -17,7 +17,7 @@ function capitalCase(word: string): string {
         const content = capitalCase(page);
         return (
           <li>
-            <a href={`#${link}`}>{capitalCase(page)}</a>{" "}
+            <a href={`#${link}`}>{content}</a>{" "}
           </li>
         );
       })
@@ -26,6 +26,9 @@ function capitalCase(word: string): string {
 </div>
 
 <style>
+  .menu {
+    grid-column: none;
+  }
   .menu ul {
     gap: 0.5rem;
     display: flex;
@@ -51,5 +54,22 @@ function capitalCase(word: string): string {
   .menu ul li a:hover {
     color: var(--main-bg);
     background-color: white;
+  }
+  @media (max-width: 970px) {
+    .menu ul {
+      width: 100%;
+      text-align: center;
+      background-color: var(--main-bg);
+      flex-direction: column;
+    }
+    .menu ul li:last-child a {
+      margin-left: 0;
+    }
+    .menu {
+      display: none;
+    }
+    a {
+      display: block;
+    }
   }
 </style>
