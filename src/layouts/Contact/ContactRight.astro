@@ -1,5 +1,6 @@
 ---
 import MarkedText from "../../components/MarkedText.astro";
+import FormContact from "./FormContact.astro";
 ---
 
 <div class="contact_right">
@@ -8,5 +9,26 @@ import MarkedText from "../../components/MarkedText.astro";
     shkruani tani – konsultimi është <MarkedText>falas</MarkedText> dhe pa obligim.
   </p>
   <p>Na thuaj disa gjëra për veten:</p>
- 
+  <FormContact />
 </div>
+<style>
+  .contact_right {
+    box-shadow: 0px 0px 10px;
+    padding: 3rem;
+    border-radius: 8px;
+  }
+  .contact_right p:first-child {
+    line-height: 130%;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .contact_right p {
+    font-size: 1.2rem;
+    padding: 2rem 0;
+  }
+  @media (max-width: 380px) {
+    .contact_right {
+      padding: 1rem;
+    }
+  }
+</style>
