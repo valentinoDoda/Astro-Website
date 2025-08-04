@@ -1,0 +1,44 @@
+---
+interface Props {
+  data: {
+    title: string;
+    description: string;
+    img: string;
+    href: string;
+    services: string[];
+  }[];
+}
+import ProjectCard from "../components/ProjectCard.astro";
+const { data } = Astro.props;
+---
+
+<div class="all_projects">
+  {
+    data.map((company) => {
+      return <ProjectCard img={company.img} services={[...company.services]} link={company.href}>
+        <Fragment slot="title">{company.title}</Fragment>
+        <Fragment slot="description">{company.description}</Fragment>
+      </ProjectCard>;
+    })
+  }
+</div>
+
+<style>
+  .all_projects {
+    margin-top: 5rem;
+    display: grid;
+    gap: 2.5rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: 970px) {
+    .member_cards,
+    .all_projects {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 615px) {
+    .all_projects {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

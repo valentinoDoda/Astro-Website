@@ -57,7 +57,8 @@ import HeroContent from "./HeroContent.astro";
   }
   .hero-ctas {
     margin-top: 4rem;
-    display: flex;
+    display: grid;
+    grid-template-columns: max-content max-content;
     gap: 1.5rem;
   }
   .hero_benefits {
@@ -84,6 +85,8 @@ import HeroContent from "./HeroContent.astro";
   @media (max-width: 380px) {
     .hero-ctas {
       display: grid;
+      grid-template-columns: 1fr;
+      justify-content: stretch;
       text-align: center;
     }
   }

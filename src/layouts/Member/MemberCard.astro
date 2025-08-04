@@ -23,5 +23,13 @@ const { member } = Astro.props;
   <DescriptionCollapse client:visible>
     <slot />
   </DescriptionCollapse>
-  <FeaturesCards niche="user" features={member.features} />
+  <div class="member_skills">
+    <FeaturesCards niche="user" features={member.features} />
+  </div>
 </div>
+
+<style>
+  .member_skills {
+    margin-top: 1.5rem;
+  }
+</style>

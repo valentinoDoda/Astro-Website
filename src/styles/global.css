@@ -148,6 +148,10 @@ a {
   margin-left: auto;
 
 }
+.service_cta{
+  display: grid;
+  justify-content: center;
+}
 @media (max-width: 970px) {
   .member_cards {
     grid-template-columns: repeat(2, 1fr);
@@ -174,5 +178,14 @@ a {
   to {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+@media (max-width: 380px){
+  .service_cta{
+    justify-content: stretch;
+  }
+  .project_btns{
+    grid-template-columns: 1fr;
+    
   }
 }

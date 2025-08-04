@@ -1,0 +1,73 @@
+---
+import DescriptionCollapse from "./DescriptionCollapse.vue";
+import FeaturesCards from "./FeaturesCards.astro";
+import ActionElement from "../components/ActionElement.astro";
+interface Props {
+  img: string;
+  services: string[];
+  link: string;
+}
+const { img, services, link } = Astro.props;
+---
+
+<div class="project_container">
+  <div class="project_img">
+    <img loading="lazy" src={img} alt="" />
+  </div>
+  <h3><slot name="title"/></h3>
+  <div class="project_services">
+    <FeaturesCards features={[...services]} niche="company" />
+  </div>
+
+  <div class="project_description">
+    <DescriptionCollapse client:visible>
+      <slot name="description" />
+    </DescriptionCollapse>
+  </div>
+
+  <div class="project_btns">
+    <ActionElement mode="secondary" href={link}>Shiko</ActionElement>
+    <ActionElement mode="primary" href="#kontakti">Fillo Tenden</ActionElement>
+  </div>
+</div>
+
+<style>
+  .project_container > * {
+    padding: 0 1rem;
+  }
+  .project_container {
+    padding-bottom: 2rem;
+    border-radius: 16px;
+    box-shadow: 0px 0px 4px black;
+  }
+  .project_img img {
+    border-radius: 16px;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+  .project_container h3 {
+    text-align: left;
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+  .project_services {
+    padding: 0.5rem 1rem;
+  }
+  .project_btns {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem;
+  }
+  .project_description {
+    padding-top: 1rem !important;
+    padding-bottom: 3rem !important;
+  }
+  @media (max-width: 380px){
+  .project_btns{
+    grid-template-columns: 1fr;
+    
+  }
+}
+
+</style>

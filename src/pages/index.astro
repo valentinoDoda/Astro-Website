@@ -18,6 +18,8 @@ import AllServices from "../layouts/Service/AllServices.astro";
 import ActionElement from "../components/ActionElement.astro";
 import ProcessStep from "../layouts/Proccess/ProcessStep.astro";
 import CtaSection from "../layouts/CtaSection.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import AllProjects from "../layouts/AllProjects.astro";
 ---
 
 <!doctype html>
@@ -102,9 +104,11 @@ import CtaSection from "../layouts/CtaSection.astro";
           },
         ]}
       />
-      <ActionElement href="#kontakti" mode="primary"
-        >Na dërgoni për të filluar</ActionElement
-      >
+      <div class="service_cta">
+        <ActionElement href="#kontakti" mode="primary"
+          >Na dërgoni për të filluar</ActionElement
+        >
+      </div>
     </section>
 
     <section class="process">
@@ -147,6 +151,49 @@ import CtaSection from "../layouts/CtaSection.astro";
       <Fragment slot="cta_btn">Merrni Një Konsultim Falas</Fragment>
     </CtaSection>
 
+    <section class="projects" id="projektet">
+      <h3>Projektet</h3>
+      <AllProjects
+        data={[
+          {
+            title: "Consor",
+            description:
+              "Në Website Tech Albania, e kemi bërë të mundur: një platformë të fuqishme web, identitet vizual që mbahet mend, dhe strategji marketingu që sjellin rezultate. Të gjitha në një vend.",
+            href: "https://consortiamanager.com/",
+            services: [
+              "Zhvillim i Përshtatur Web",
+              "Branding & Dizajn",
+              "Marketing Teknologjik",
+            ],
+            img: "consor.png",
+          },
+          {
+            title: "ProfitMetrics",
+            description:
+              "Në Website Tech Albania, e kemi bërë të mundur: një platformë të fuqishme web, identitet vizual që përmbahet në mendje, dhe strategji marketingu që sjellin rezultate. Të gjitha në një vend.",
+            href: "https://profitmetrics.io/",
+            services: [
+              "Zhvillim i Përshtatur Web",
+              "Branding & Dizajn",
+              "Marketing Teknologjik",
+            ],
+            img: "profit.png",
+          },
+          {
+            title: "Darte",
+            description:
+              "Në Website Tech Albania, e kemi bërë të mundur: një platformë të fuqishme web, identitet vizual që përmbahet në mendje, dhe strategji marketingu që sjellin rezultate. Të gjitha në një vend.",
+            href: "https://darte.al/",
+            services: [
+              "Zhvillim i Përshtatur Web",
+              "Branding & Dizajn",
+              "Marketing Teknologjik",
+            ],
+            img: "darte.png",
+          },
+        ]}
+      />
+    </section>
     <script>
       const elements = document.querySelectorAll(
         `h3, .member_card, .sub_title, .our_purpose, .service, .section_cta`

@@ -21,7 +21,7 @@ const { type, mode, href } = Astro.props;
 <style>
   a {
     display: block;
-    width: max-content;
+    width: 100%;
   }
   a,
   button {
@@ -34,9 +34,5 @@ const { type, mode, href } = Astro.props;
     color: var(--paragraph-color);
     font-size: 1rem;
   }
-  @media (max-width: 380px) {
-    a {
-      width: 100%;
-    }
-  }
+
 </style>
