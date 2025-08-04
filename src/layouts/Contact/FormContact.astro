@@ -32,21 +32,35 @@ import ActionElement from "../../components/ActionElement.astro";
 </style>
 
 <script>
-  const contactForm = document.getElementById("contact_form");
-  const phone = "355676457173";
-  contactForm.addEventListener("submit", (e) => {
+  const contactForm = document.querySelector(
+    ".contact_form"
+  ) as HTMLFormElement; // Υποθέτοντας ότι υπάρχει ένα στοιχείο με την κλάση "contact_form"
+
+  contactForm.addEventListener("submit", (e: Event) => {
     e.preventDefault();
-    const userName = document.querySelector(
-      ".contact_form input:first-child"
+
+    const userName = (
+      document.querySelector(
+        ".contact_form input:first-child"
+      ) as HTMLInputElement
     ).value;
-    const userEmail = document.querySelector(
-      ".contact_form input:nth-child(2)"
+    const userEmail = (
+      document.querySelector(
+        ".contact_form input:nth-child(2)"
+      ) as HTMLInputElement
     ).value;
-    const userMessage = document.querySelector(".contact_form textarea").value;
+    const userMessage = (
+      document.querySelector(".contact_form textarea") as HTMLTextAreaElement
+    ).value;
+
+    const phone = "355676457173";
+
     const whatsUpMsg = `Emri i user-it : ${userName} \n Email-i: ${userEmail} \n Messazhi: ${userMessage}`;
     const enCodeMsg = encodeURIComponent(whatsUpMsg);
     const whatUpTaker = `https://wa.me/${phone}?text=${enCodeMsg}`;
+
     window.open(whatUpTaker, "_blank");
+
     console.log(userName, userEmail, userMessage, enCodeMsg);
   });
 </script>
